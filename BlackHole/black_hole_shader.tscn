@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkmncawyu5n00"]
+
+[ext_resource type="Shader" path="res://shaders/bh.gdshader" id="1_dk3bc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gj4k2"]
+shader = ExtResource("1_dk3bc")
+shader_parameter/black_color = Vector4(0, 0, 0, 1)
+shader_parameter/particle_count = 100
+shader_parameter/particle_speed = 0.7
+shader_parameter/particle_size = 0.005
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_06h6n"]
+size = Vector2(0, 0)
+
+[node name="BlackHoleShader" type="TextureRect"]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_gj4k2")
+offset_right = 479.0
+offset_bottom = 479.0
+texture = SubResource("PlaceholderTexture2D_06h6n")
